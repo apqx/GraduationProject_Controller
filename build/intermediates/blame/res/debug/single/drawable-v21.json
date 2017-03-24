@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Android\\.android\\build-cache\\a779e9f33f9e274c457dd4fa24c515c909b0a175\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\main_background_ripple_circle.xml",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\src\\main\\res\\drawable-v21\\main_background_ripple_circle.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Android\\.android\\build-cache\\30c0e0f7c5cc8237b851faf691ca6b3c0d67f2ad\\output\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Android\\.android\\build-cache\\30c0e0f7c5cc8237b851faf691ca6b3c0d67f2ad\\output\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Android\\.android\\build-cache\\a779e9f33f9e274c457dd4fa24c515c909b0a175\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Android\\.android\\build-cache\\a779e9f33f9e274c457dd4fa24c515c909b0a175\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Android\\.android\\build-cache\\a779e9f33f9e274c457dd4fa24c515c909b0a175\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Android\\.android\\build-cache\\30c0e0f7c5cc8237b851faf691ca6b3c0d67f2ad\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Android\\.android\\build-cache\\30c0e0f7c5cc8237b851faf691ca6b3c0d67f2ad\\output\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-v21\\main_background_ripple.xml",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\src\\main\\res\\drawable-v21\\main_background_ripple.xml"
+    }
+]

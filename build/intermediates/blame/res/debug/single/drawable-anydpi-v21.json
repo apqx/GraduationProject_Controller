@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\icon_settings.xml",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\icon_settings.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\icon_send.xml",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\icon_send.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\icon_expand.xml",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\icon_expand.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\icon_send_pressed.xml",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\icon_send_pressed.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\icon_traffic.xml",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\icon_traffic.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "C:\\Android\\.android\\build-cache\\30c0e0f7c5cc8237b851faf691ca6b3c0d67f2ad\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "C:\\Android\\.android\\build-cache\\30c0e0f7c5cc8237b851faf691ca6b3c0d67f2ad\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+    }
+]

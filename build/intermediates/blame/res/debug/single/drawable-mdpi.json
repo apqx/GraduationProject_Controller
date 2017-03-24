@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\icon_settings.png",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\icon_settings.png"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\icon_traffic.png",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\icon_traffic.png"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\icon_send_pressed.png",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\icon_send_pressed.png"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\icon_send.png",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\icon_send.png"
+    },
+    {
+        "merged": "D:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\icon_expand.png",
+        "source": "D:\\Android_Studio\\MyProject\\controller\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\icon_expand.png"
+    }
+]

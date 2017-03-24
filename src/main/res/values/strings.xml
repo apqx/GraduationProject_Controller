@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Controller</string>
+    <string name="toolbar_setting">设置</string>
+    <string name="toolbar_test">测试</string>
+    <string name="character_to_send">Character to send</string>
+    <string name="btn_search_devices">搜索设备</string>
+    <string name="toolbar_disconnect">断开连接</string>
+</resources>

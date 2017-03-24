@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="默认值">
+        <EditTextPreference
+            android:title="默认节点速度"
+            android:summary="设置路径规划时默认的速度"
+            android:key="velocity"
+            android:defaultValue="10"
+            android:inputType="number"/>
+        <EditTextPreference
+            android:title="默认节点时间"
+            android:summary="设置路径规划时默认的两个节点之间的时间（毫秒）"
+            android:key="time"
+            android:defaultValue="5000"
+            android:inputType="number"/>
+    </PreferenceCategory>
+</PreferenceScreen>

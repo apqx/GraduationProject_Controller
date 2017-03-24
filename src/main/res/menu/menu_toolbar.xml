@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/toolbar_setting"
+        android:title="@string/toolbar_setting" />
+    <item android:id="@+id/toolbar_test"
+        android:title="@string/toolbar_test"/>
+    <item android:id="@+id/toolbar_disconnect"
+        android:title="@string/toolbar_disconnect"/>
+</menu>
