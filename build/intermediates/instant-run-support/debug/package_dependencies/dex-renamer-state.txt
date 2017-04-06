@@ -1,4 +1,4 @@
-#Fri Mar 24 16:26:03 CST 2017
+#Thu Apr 06 22:52:39 CST 2017
 file.2=D\:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_d522f44e65ca60f343a5ccb177c5f7b5ff614de7\\classes.dex
 base.2=D\:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\classes_d522f44e65ca60f343a5ccb177c5f7b5ff614de7
 file.1=D\:\\Android_Studio\\MyProject\\controller\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-annotations-25.2.0_b20fecb307ead00e7054a588c3e7a39df3c03555\\classes.dex

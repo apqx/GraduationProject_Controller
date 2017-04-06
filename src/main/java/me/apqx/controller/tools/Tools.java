@@ -23,6 +23,7 @@ import java.io.PrintStream;
 import java.util.LinkedList;
 import java.util.List;
 
+import me.apqx.controller.ManualNode;
 import me.apqx.controller.MyApplication;
 import me.apqx.controller.Node;
 import me.apqx.controller.R;
@@ -105,6 +106,11 @@ public class Tools {
         return (int)(dpValue*fontScale+0.5f);
     }
 
+    /**
+     * 路径模式下， 将包含路径点的List封装成JsonArray字符串
+     * @param nodeList
+     * @return
+     */
     public static String getJsonFromNodeList(List<Node> nodeList){
         JSONArray jsonArray=new JSONArray();
         JSONObject jsonNode=null;
@@ -116,11 +122,6 @@ public class Tools {
                 jsonNode.put("degree",node.getDegree());
                 jsonNode.put("index",node.getIndexOfGrid());
                 jsonNode.put("unload",node.getUnload());
-                jsonNode.put("up",node.getUp());
-                jsonNode.put("down",node.getDown());
-                jsonNode.put("right",node.getRight());
-                jsonNode.put("left",node.getLeft());
-                jsonNode.put("stop",node.getStop());
                 jsonArray.put(jsonNode);
             }
         }catch (JSONException e){
@@ -129,6 +130,32 @@ public class Tools {
         return jsonArray.toString();
     }
 
+    /**
+     * 手动模式下，将命令节点封装成Json字符串
+     * @param node
+     * @return
+     */
+    public static String getJsonFromNode(ManualNode node){
+        JSONObject jsonObject=null;
+        try {
+            jsonObject=new JSONObject();
+            jsonObject.put("up",node.getUp());
+            jsonObject.put("down",node.getDown());
+            jsonObject.put("left",node.getLeft());
+            jsonObject.put("right",node.getRight());
+            jsonObject.put("stop",node.getStop());
+            jsonObject.put("velocity",node.getVelocity());
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return jsonObject.toString();
+    }
+
+    /**
+     * 路径模式下，从Json数据中读取各节点的信息，封装成List
+     * @param json
+     * @return
+     */
     public static List<Node> getNodeListFromJson(String json){
         List<Node> nodeList=new LinkedList<Node>();
         try {

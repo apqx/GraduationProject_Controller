@@ -47,7 +47,6 @@ public class MyGridLayout extends View {
     private List<Node> nodeList;
     //degree默认为0，即朝向正前方，向左180度为负值，向右180度为正值
     private int time,velocity,degree;
-    private int unload=Node.NO_UNLOAD;
     private int[][] vector;
 
     public MyGridLayout(Context context, @Nullable AttributeSet attrs) {
@@ -128,7 +127,7 @@ public class MyGridLayout extends View {
                         lastIndex=index;
                         shouldDrawLine=true;
 //                        Log.d("apqx","node time = "+time);
-                        nodeList.add(new Node(velocity,time,degree,index,unload));
+                        nodeList.add(new Node(velocity,time,degree,index,Node.NO_UNLOAD));
                     }else if ((existNode=isNodeExist(index))!=null){
                         //高亮改点及路径，弹窗输入设置项
 //                        Log.d("apqx","highLight "+index);
@@ -146,7 +145,7 @@ public class MyGridLayout extends View {
                         path.lineTo(center[0],center[1]);
                         path.lineTo(x,y);
                         lastIndex=index;
-                        nodeList.add(new Node(velocity,time,degree,index,unload));
+                        nodeList.add(new Node(velocity,time,degree,index,Node.NO_UNLOAD));
                     }else {
                         path.setLastPoint(x,y);
                     }

@@ -242,72 +242,56 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class MOnControllerListener implements OnControllerListener{
-        //这里应该把数据封装成Node节点，以JSON的形式发送，路径规划时，up、down、right、left、stop的值都是1；而手动控制时，应是对应值，接收方应首先判断，如果其中有一个为0，说明为手动模式，应执行
-        //不同的逻辑
-        //是不是给手动模式单独用一种数据格式，不确定
-        List<Node> list=new ArrayList<Node>();
+        //这里应该把数据封装成Node节点，以JSON的形式发送，手动模式只是发送JSON节点，[]，路径模式发送JSONArray，{}
         String string="";
         @Override
         public void up(int velocity) {
-//            Log.d("apqx","up"+" "+velocity);
-            Node node=new Node(velocity,0,0,0,Node.NO_UNLOAD);
-            node.setUpManual();
-            list.clear();
-            list.add(node);
-            string=Tools.getJsonFromNodeList(list);
+            ManualNode node=new ManualNode(velocity);
+            node.setUp(ManualNode.YES);
+            string=Tools.getJsonFromNode(node);
             sendTextThroughConnect(string);
         }
 
         @Override
         public void down(int velocity) {
-//            Log.d("apqx","down"+" "+velocity);
-            Node node=new Node(velocity,0,0,0,Node.NO_UNLOAD);
-            node.setDownManual();
-            list.clear();
-            list.add(node);
-            string=Tools.getJsonFromNodeList(list);
+            ManualNode node=new ManualNode(velocity);
+            node.setDown(ManualNode.YES);
+            string=Tools.getJsonFromNode(node);
             sendTextThroughConnect(string);
         }
 
         @Override
         public void right(int velocity) {
-//            Log.d("apqx","right"+" "+velocity);
-            Node node=new Node(velocity,0,0,0,Node.NO_UNLOAD);
-            node.setRightManual();
-            list.clear();
-            list.add(node);
-            string=Tools.getJsonFromNodeList(list);
+            ManualNode node=new ManualNode(velocity);
+            node.setRight(ManualNode.YES);
+            string=Tools.getJsonFromNode(node);
             sendTextThroughConnect(string);
         }
 
         @Override
         public void left(int velocity) {
-//            Log.d("apqx","left"+" "+velocity);
-            Node node=new Node(velocity,0,0,0,Node.NO_UNLOAD);
-            node.setLeftManual();
-            list.clear();
-            list.add(node);
-            string=Tools.getJsonFromNodeList(list);
+            ManualNode node=new ManualNode(velocity);
+            node.setLeft(ManualNode.YES);
+            string=Tools.getJsonFromNode(node);
             sendTextThroughConnect(string);
         }
 
         @Override
         public void stop() {
-//            Log.d("apqx","stop"+" ");
-            Node node=new Node(velocity,0,0,0,Node.NO_UNLOAD);
-            node.setStopManual();
-            list.clear();
-            list.add(node);
-            string=Tools.getJsonFromNodeList(list);
+            ManualNode node=new ManualNode(ManualNode.NO_VELOCITY);
+            node.setStop(ManualNode.YES);
+            string=Tools.getJsonFromNode(node);
             sendTextThroughConnect(string);
         }
     }
 
     //use this common method to send text through bluetooth connect
     private void sendTextThroughConnect(String string){
+        Log.d("apqx","try send = "+string);
         if (connect!=null){
             if (!string.equals("")){
                 connect.sendText(string);
+                Log.d("apqx","send = "+string);
                 Tools.showToast("发送数据");
             }else {
                 Tools.showToast("空数据");

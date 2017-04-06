@@ -207,7 +207,13 @@ public class ControllerView extends View {
         }
         return true;
     }
-    //设置表示百分比的圆半径
+
+    /**
+     * 设置表示百分比的圆半径，同时设置对应的速度
+     * @param x 触控点的横坐标
+     * @param y 触控点的纵坐标
+     * @return 返回速度
+     */
     private int setPresentRadius(int x,int y){
         int velocity;
         int length=(int)Tools.getDistance(x,y,centerX,centerY);
@@ -221,11 +227,25 @@ public class ControllerView extends View {
         return velocity;
     }
 
-    //获取点与圆心连线与横轴的夹角
+    /**
+     * 获取点与圆心连线与横轴的夹角
+     * @param centerX 圆心横坐标
+     * @param centerY 圆心纵坐标
+     * @param startX 当前点横坐标
+     * @param startY 当前点纵坐标
+     * @return 夹角
+     */
     private double getAngle(double centerX,double centerY,double startX,double startY){
         return Math.atan((startY-centerY)/(startX-centerX));
     }
-    //获取并设置与圈外点相对应的控制圆边界上的点坐标,判断点击的行为
+
+    /**
+     * 获取并设置与圈外点相对应的控制圆边界上的点坐标,判断点击的行为
+     * @param centerX 圆心横坐标
+     * @param centerY 圆心纵坐标
+     * @param currentX 当前点横坐标
+     * @param currentY 当前点纵坐标
+     */
     private void setPointOnCircle(int centerX,int centerY,int currentX,int currentY){
         double tempLength=centerRadius*Math.sqrt(2)/2;
         double angle=getAngle(centerX,centerY,currentX,currentY);
@@ -325,11 +345,20 @@ public class ControllerView extends View {
             }
         }
     }
-    //暴露监听器
+
+    /**
+     * 对外暴露监听器
+     * @param listener 监听器
+     */
     public void setOnControllerListener(OnControllerListener listener){
         this.listener=listener;
     }
-    //对外提供模拟设置触摸点方法
+
+    /**
+     * 对外提供模拟设置触摸点方法
+     * @param setX 模拟触摸点的横坐标
+     * @param setY 模拟触摸点的纵坐标
+     */
     public void setPoint(int setX,int setY){
         isInit=false;
         if (Tools.getDistance(centerX,centerY,setX,setY)<=centerLength){
