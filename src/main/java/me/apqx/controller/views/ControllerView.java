@@ -53,7 +53,7 @@ public class ControllerView extends View {
     //当前点击坐标
     private int currentX,currentY;
     //最大速度和最低速度
-    private int maxVelocity=10,minVelocity=1;
+    private int maxVelocity=255,minVelocity=1;
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {

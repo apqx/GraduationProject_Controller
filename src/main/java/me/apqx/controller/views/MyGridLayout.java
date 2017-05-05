@@ -394,7 +394,7 @@ public class MyGridLayout extends View {
         for (int i=0;i<nodeList.size()-1;i++){
             int[] currentXy=getCenter(nodeList.get(i).getIndexOfGrid());
             int[] nextXy=getCenter(nodeList.get(i+1).getIndexOfGrid());
-            int nodeTime=1+(int)(((float)time/itemWidth)*Tools.getDistance(currentXy[0],currentXy[1],nextXy[0],nextXy[1]));
+            int nodeTime=(int)(((float)time/itemWidth)*Tools.getDistance(currentXy[0],currentXy[1],nextXy[0],nextXy[1]));
             nodeList.get(i).setTime(nodeTime);
         }
     }
@@ -463,7 +463,7 @@ public class MyGridLayout extends View {
 
     public String getPathDataToSend(){
         Log.d("apqx","getPathDataToSend");
-        return Tools.getJsonFromNodeList(nodeList);
+        return Tools.getArrayFromNodeList(nodeList);
     }
 
 }

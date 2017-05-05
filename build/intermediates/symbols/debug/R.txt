@@ -817,7 +817,7 @@ int id navigation_header_container 0x7f0e0079
 int id never 0x7f0e003d
 int id none 0x7f0e0014
 int id normal 0x7f0e0010
-int id notification_background 0x7f0e00ad
+int id notification_background 0x7f0e00ac
 int id notification_main_column 0x7f0e00a7
 int id notification_main_column_container 0x7f0e00a6
 int id parallax 0x7f0e0030
@@ -830,7 +830,7 @@ int id relativeLayout_controlPanel 0x7f0e0091
 int id relativeLayout_root 0x7f0e008b
 int id relativeLayout_rout 0x7f0e008f
 int id right 0x7f0e002d
-int id right_icon 0x7f0e00ac
+int id right_icon 0x7f0e00ad
 int id right_side 0x7f0e00a8
 int id screen 0x7f0e0020
 int id scroll 0x7f0e001c

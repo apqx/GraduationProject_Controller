@@ -785,7 +785,7 @@ public final class R {
         public static final int never = 0x7f0e003d;
         public static final int none = 0x7f0e0014;
         public static final int normal = 0x7f0e0010;
-        public static final int notification_background = 0x7f0e00ad;
+        public static final int notification_background = 0x7f0e00ac;
         public static final int notification_main_column = 0x7f0e00a7;
         public static final int notification_main_column_container = 0x7f0e00a6;
         public static final int parallax = 0x7f0e0030;
@@ -795,7 +795,7 @@ public final class R {
         public static final int progress_horizontal = 0x7f0e0007;
         public static final int radio = 0x7f0e005d;
         public static final int right = 0x7f0e002d;
-        public static final int right_icon = 0x7f0e00ac;
+        public static final int right_icon = 0x7f0e00ad;
         public static final int right_side = 0x7f0e00a8;
         public static final int screen = 0x7f0e0020;
         public static final int scroll = 0x7f0e001c;

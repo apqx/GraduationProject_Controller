@@ -242,46 +242,56 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class MOnControllerListener implements OnControllerListener{
-        //这里应该把数据封装成Node节点，以JSON的形式发送，手动模式只是发送JSON节点，[]，路径模式发送JSONArray，{}
+        //这里应该把数据封装成Node节点，以数组的形式发送，手动模式只是发送JSON节点，一维数组，路径模式发送JSONArray，二维数组
         String string="";
         @Override
         public void up(int velocity) {
             ManualNode node=new ManualNode(velocity);
             node.setUp(ManualNode.YES);
-            string=Tools.getJsonFromNode(node);
+//            string=Tools.getJsonFromNode(node);
+            string=Tools.getArrayFromNode(node);
             sendTextThroughConnect(string);
+//            sendTextThroughConnect("q");
         }
 
         @Override
         public void down(int velocity) {
             ManualNode node=new ManualNode(velocity);
             node.setDown(ManualNode.YES);
-            string=Tools.getJsonFromNode(node);
+//            string=Tools.getJsonFromNode(node);
+            string=Tools.getArrayFromNode(node);
             sendTextThroughConnect(string);
+//            sendTextThroughConnect("z");
         }
 
         @Override
         public void right(int velocity) {
             ManualNode node=new ManualNode(velocity);
             node.setRight(ManualNode.YES);
-            string=Tools.getJsonFromNode(node);
+//            string=Tools.getJsonFromNode(node);
+            string=Tools.getArrayFromNode(node);
             sendTextThroughConnect(string);
+//            sendTextThroughConnect("s");
         }
 
         @Override
         public void left(int velocity) {
             ManualNode node=new ManualNode(velocity);
             node.setLeft(ManualNode.YES);
-            string=Tools.getJsonFromNode(node);
+//            string=Tools.getJsonFromNode(node);
+            string=Tools.getArrayFromNode(node);
             sendTextThroughConnect(string);
+//            sendTextThroughConnect("w");
         }
 
         @Override
         public void stop() {
             ManualNode node=new ManualNode(ManualNode.NO_VELOCITY);
             node.setStop(ManualNode.YES);
-            string=Tools.getJsonFromNode(node);
+//            string=Tools.getJsonFromNode(node);
+            string=Tools.getArrayFromNode(node);
             sendTextThroughConnect(string);
+//            sendTextThroughConnect("x");
         }
     }
 

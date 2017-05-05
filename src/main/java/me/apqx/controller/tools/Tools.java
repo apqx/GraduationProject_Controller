@@ -20,6 +20,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -131,7 +132,32 @@ public class Tools {
     }
 
     /**
-     * 手动模式下，将命令节点封装成Json字符串
+     * 路径模式下，将包含路径点的List封装成二维数组字符串，用于发送
+     * @param nodeList
+     * @return
+     */
+    public static String getArrayFromNodeList(List<Node> nodeList){
+        StringBuilder stringBuilder=new StringBuilder();
+        stringBuilder.append("[");
+        for (int i=0;i<nodeList.size();i++){
+            Node node=nodeList.get(i);
+            if (i==nodeList.size()-1){
+                break;
+            }
+            int[] array=new int[4];
+            array[0]=node.getVelocity();
+            array[1]=node.getTime();
+            array[2]=node.getDegree();
+            array[3]=node.getUnload();
+            stringBuilder.append(Arrays.toString(array)+",");
+        }
+        stringBuilder.deleteCharAt(stringBuilder.length()-1);
+        stringBuilder.append("]");
+        return stringBuilder.toString();
+    }
+
+    /**
+     * 手动模式下，将命令节点封装成Json字符串（已废弃）
      * @param node
      * @return
      */
@@ -149,6 +175,21 @@ public class Tools {
             e.printStackTrace();
         }
         return jsonObject.toString();
+    }
+
+    /**
+     * 手动模式下，将命令节点封装成数组字符串
+     * @param node
+     * @return
+     */
+    public static String getArrayFromNode(ManualNode node){
+        int[] array=new int[5];
+        array[0]=node.getUp()==ManualNode.NO?0:node.getVelocity();
+        array[1]=node.getDown()==ManualNode.NO?0:node.getVelocity();
+        array[2]=node.getLeft()==ManualNode.NO?0:1;
+        array[3]=node.getRight()==ManualNode.NO?0:1;
+        array[4]=node.getStop()==ManualNode.NO?0:1;
+        return Arrays.toString(array);
     }
 
     /**

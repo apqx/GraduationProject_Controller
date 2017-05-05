@@ -6,13 +6,13 @@
             android:title="默认节点速度"
             android:summary="设置路径规划时默认的速度"
             android:key="velocity"
-            android:defaultValue="10"
+            android:defaultValue="100"
             android:inputType="number"/>
         <EditTextPreference
             android:title="默认节点时间"
-            android:summary="设置路径规划时默认的两个节点之间的时间（毫秒）"
+            android:summary="设置路径规划时默认的两个节点之间的时间（秒）"
             android:key="time"
-            android:defaultValue="5000"
+            android:defaultValue="5"
             android:inputType="number"/>
     </PreferenceCategory>
 </PreferenceScreen>
