@@ -148,7 +148,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:id="@+id/btn_searchDevices"
-                            android:text="@string/btn_search_devices"
+                            android:content="@string/btn_search_devices"
                             android:onClick="clickSearchDevices"
                             android:background="@drawable/main_background_ripple"/>
                         <me.apqx.controller.views.ControllerView
