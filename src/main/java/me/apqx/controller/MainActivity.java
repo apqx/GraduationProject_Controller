@@ -43,7 +43,7 @@ import me.apqx.controller.views.OnControllerListener;
  *
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private Toolbar toolbar;
     private ControllerView controllerView;
     private Connect connect;
@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity {
     private MyGridLayout myGridLayout;
     private SharedPreferences sharedPreferences;
     private MyRelativeLayout myRelativeLayout;
+    private Button btn_up;
+    private Button btn_down;
 
     private int velocity,time;
     @Override
@@ -60,6 +62,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_main);
 
+        btn_up=(Button)findViewById(R.id.btn_standUP);
+        btn_down=(Button)findViewById(R.id.btn_layDown);
+        btn_up.setOnClickListener(this);
+        btn_down.setOnClickListener(this);
         Tools.checkAndGetPermissions(this, Manifest.permission.BLUETOOTH,Manifest.permission.BLUETOOTH_ADMIN,Manifest.permission.ACCESS_COARSE_LOCATION);
         bluetoothAdapter=BluetoothAdapter.getDefaultAdapter();
         if (bluetoothAdapter!=null){
@@ -107,10 +113,10 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         velocity=Integer.parseInt(sharedPreferences.getString("velocity","0"));
         time=Integer.parseInt(sharedPreferences.getString("time","0"));
-//        Log.d("apqx","onCreate "+velocity+" "+time);
+        Log.d("apqx","onCreate "+velocity+" "+time);
 
         myGridLayout.setTime(time);
-//        Log.d("apqx","main resume time = "+time);
+        Log.d("apqx","main resume time = "+time);
         myGridLayout.setVelocity(velocity);
     }
 
@@ -239,6 +245,20 @@ public class MainActivity extends AppCompatActivity {
             default:break;
         }
         return true;
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_standUP:
+                //货物抬起
+                sendTextThroughConnect("U");
+                break;
+            case R.id.btn_layDown:
+                //货物卸下
+                sendTextThroughConnect("D");
+                break;
+        }
     }
 
     private class MOnControllerListener implements OnControllerListener{

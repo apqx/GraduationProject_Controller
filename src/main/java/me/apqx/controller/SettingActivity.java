@@ -20,9 +20,7 @@ import me.apqx.controller.views.MyGridLayout;
 public class SettingActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private MyGridLayout myGridLayout;
-    private SharedPreferences sharedPreferences;
     private int velocity,time;
-    private SharedPreferences.OnSharedPreferenceChangeListener onSharedPreferenceChangeListener;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,21 +32,8 @@ public class SettingActivity extends AppCompatActivity {
 
         View view= LayoutInflater.from(this).inflate(R.layout.layout_main,null);
         myGridLayout=(MyGridLayout)view.findViewById(R.id.myGridLayout);
-        sharedPreferences= PreferenceManager.getDefaultSharedPreferences(this);
-        onSharedPreferenceChangeListener=new MyPreferenceChangeListener();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-//        sharedPreferences.registerOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-//        sharedPreferences.unregisterOnSharedPreferenceChangeListener(onSharedPreferenceChangeListener);
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -60,16 +45,4 @@ public class SettingActivity extends AppCompatActivity {
         return true;
     }
 
-    private class MyPreferenceChangeListener implements SharedPreferences.OnSharedPreferenceChangeListener{
-        @Override
-        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-            if (key.equals("velocity")){
-                velocity=Integer.parseInt(sharedPreferences.getString("velocity","0"));
-                myGridLayout.setVelocity(velocity);
-            }else if (key.equals("time")){
-                time=Integer.parseInt(sharedPreferences.getString("time","0"));
-                myGridLayout.setTime(time);
-            }
-        }
-    }
 }

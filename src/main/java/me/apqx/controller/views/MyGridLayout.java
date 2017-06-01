@@ -68,6 +68,7 @@ public class MyGridLayout extends View {
         nodeList=new LinkedList<Node>();
     }
 
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         setMeasuredDimension(measure(widthMeasureSpec),measure(heightMeasureSpec));
